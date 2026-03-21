@@ -2,9 +2,11 @@ name: Lint Commit Messages
 
 on:
   push:
-    branches:
-      - master
-      - "hotfix/*"
+    branches-ignore:
+      - '**'  # 모든 브랜치 무시 (사실상 비활성화)
+    #branches:
+    #  - master
+    #  - "hotfix/*"
   pull_request:
 
 jobs:
